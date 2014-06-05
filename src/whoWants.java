@@ -13,7 +13,7 @@
 				ran = (i <= 0.3) ? 1 : ((i > 0.3) && (i < 0.66)) ? 2 : 3; // рандом от 1 до 3
 				switch(ran){  
 				case 1:
-				//Case 1------------------------------------
+				//Case 1----------------------------
 							input = JOptionPane.showInputDialog("The capital of Great Britain is:\n"
 							+ "\n1) Dublin             3) London "
 							+ "\n2) Rotterdam     4) Kishinev "
