@@ -6,7 +6,7 @@ public class LotteryTask14 {
 			String str0 = "WELCOME TO THE JAVALOTTERY!\n";
 			String str1 = "\nPlease offer ";
 			String str2  = " number from 5\nbetween 1 and 42";
-			String strOffer ="Your    combination     is "; 
+			String strOffer ="Your    combination     is     "; 
 			String strLot   ="The winning combination is "; 
 			String seq [] = {"first","second","third","fourth","fifth"};
 
@@ -17,7 +17,7 @@ public class LotteryTask14 {
 	//==== setting random unique members to array - присваиваем элементам массива уникальные значения 
 			for(i=0; i<lot.length; i++){
 				do{	match=0;
-					val =(int)((Math.random()*5)+1);			
+					val =(int)((Math.random()*42)+1); // the range including 42  			
 							for(j=0;j<lot.length;j++){
 								if (lot[j] == val) {
 									match=1;
@@ -59,10 +59,12 @@ public class LotteryTask14 {
 			
 	//================ Final message ========================================================= 				
 			i = (scores == 3)? 300 : (scores == 4)? 4000 : (scores == 5)? 50000 : 0;
-			if (i==0) 		
-				JOptionPane.showMessageDialog(null,strOffer+"\n"+strLot+"\n"+scores);
-			else 
+			if (i==0 && scores > 0) 		
+				JOptionPane.showMessageDialog(null,strOffer+"\n"+strLot+"\nYou've guessed only"+str0+"\nBetter luck next time  buddy : )");
+			else if (i>0)
 				JOptionPane.showMessageDialog(null,"CONGRADULATIONS!\nYou've won "+i
 					+"$\n"+strOffer+"\n"+strLot+"\nYou've guessed "+str0);
+				 else 
+					 JOptionPane.showMessageDialog(null,strOffer+"\n"+strLot+"\n"+str0+"\nBetter luck next time, buddy : )");
 		}
 	}
