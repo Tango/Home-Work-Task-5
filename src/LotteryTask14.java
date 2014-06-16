@@ -17,7 +17,7 @@ public class LotteryTask14 {
 	//==== setting random unique members to array - присваиваем элементам массива уникальные значения 
 			for(i=0; i<lot.length; i++){
 				do{	match=0;
-					val =(int)((Math.random()*42)+1); // the range including 42  			
+					val =(int)((Math.random()*42)+1); // set a lottery's range from 1 to 42  			
 							for(j=0;j<lot.length;j++){
 								if (lot[j] == val) {
 									match=1;
